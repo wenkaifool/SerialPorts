@@ -97,7 +97,6 @@ class CustomizedSerialToolUI(SerialTool.CustomizedSerialToolUI):
                                                      ByteSize=self.databit,
                                                      Parity=self.parity,
                                                      Stopbits=self.stopbit)
-                self.frm_left_LED.itemconfigure(self.frm_left_LEDstate, fill='green')
 
                 self.ser.start()
                 if self.ser.alive:
@@ -105,6 +104,8 @@ class CustomizedSerialToolUI(SerialTool.CustomizedSerialToolUI):
                     self.frm_status_label["fg"] = "#66CD00"
                     self.frm_left_btn["text"] = "Close"
                     self.frm_left_btn["bg"] = "#F08080"
+
+                    self.frm_left_LED.itemconfigure(self.frm_left_LEDstate, fill='green')
 
                     self.thread_read = threading.Thread(target=self.serialread)
                     self.thread_read.setDaemon(True)
@@ -174,7 +175,7 @@ class CustomizedSerialToolUI(SerialTool.CustomizedSerialToolUI):
             try:
                 send_data = '01'
                 self.ser.write(send_data, isHex=True)
-                self.frm_status_label["text"] = "Your command 01 is sent out"
+                self.frm_status_label["text"] = "Your command [{0}] is sent out".format(send_data)
             except Exception as ex:
                 self.frm_right_receive.insert("end", str(ex) + "\n")
 
@@ -183,7 +184,7 @@ class CustomizedSerialToolUI(SerialTool.CustomizedSerialToolUI):
             try:
                 send_data = '02'
                 self.ser.write(send_data, isHex=True)
-                self.frm_status_label["text"] = "Your command 02 is sent out"
+                self.frm_status_label["text"] = "Your command [{0}] is sent out".format(send_data)
             except Exception as ex:
                 self.frm_right_receive.insert("end", str(ex) + "\n")
     def Hex_Btn03(self):
@@ -191,7 +192,7 @@ class CustomizedSerialToolUI(SerialTool.CustomizedSerialToolUI):
             try:
                 send_data = '03'
                 self.ser.write(send_data, isHex=True)
-                self.frm_status_label["text"] = "Your command 03 is sent out"
+                self.frm_status_label["text"] = "Your command [{0}] is sent out".format(send_data)
             except Exception as ex:
                 self.frm_right_receive.insert("end", str(ex) + "\n")
     def Hex_Btn04(self):
@@ -199,7 +200,7 @@ class CustomizedSerialToolUI(SerialTool.CustomizedSerialToolUI):
             try:
                 send_data = '04'
                 self.ser.write(send_data, isHex=True)
-                self.frm_status_label["text"] = "Your command 04 is sent out"
+                self.frm_status_label["text"] = "Your command [{0}] is sent out".format(send_data)
             except Exception as ex:
                 self.frm_right_receive.insert("end", str(ex) + "\n")
     def Hex_Btn05(self):
@@ -207,7 +208,7 @@ class CustomizedSerialToolUI(SerialTool.CustomizedSerialToolUI):
             try:
                 send_data = '05'
                 self.ser.write(send_data, isHex=True)
-                self.frm_status_label["text"] = "Your command 05 is sent out"
+                self.frm_status_label["text"] = "Your command [{0}] is sent out".format(send_data)
             except Exception as ex:
                 self.frm_right_receive.insert("end", str(ex) + "\n")
     def Hex_Btn06(self):
@@ -215,7 +216,7 @@ class CustomizedSerialToolUI(SerialTool.CustomizedSerialToolUI):
             try:
                 send_data = '06'
                 self.ser.write(send_data, isHex=True)
-                self.frm_status_label["text"] = "Your command 06 is sent out"
+                self.frm_status_label["text"] = "Your command [{0}] is sent out".format(send_data)
             except Exception as ex:
                 self.frm_right_receive.insert("end", str(ex) + "\n")
     def Hex_Btn07(self):
@@ -223,7 +224,7 @@ class CustomizedSerialToolUI(SerialTool.CustomizedSerialToolUI):
             try:
                 send_data = '07'
                 self.ser.write(send_data, isHex=True)
-                self.frm_status_label["text"] = "Your command 07 is sent out"
+                self.frm_status_label["text"] = "Your command [{0}] is sent out".format(send_data)
             except Exception as ex:
                 self.frm_right_receive.insert("end", str(ex) + "\n")
     def Hex_Btn08(self):
@@ -231,7 +232,7 @@ class CustomizedSerialToolUI(SerialTool.CustomizedSerialToolUI):
             try:
                 send_data = '08'
                 self.ser.write(send_data, isHex=True)
-                self.frm_status_label["text"] = "Your command 08 is sent out"
+                self.frm_status_label["text"] = "Your command [{0}] is sent out".format(send_data)
             except Exception as ex:
                 self.frm_right_receive.insert("end", str(ex) + "\n")
     def Hex_Btn09(self):
@@ -239,7 +240,7 @@ class CustomizedSerialToolUI(SerialTool.CustomizedSerialToolUI):
             try:
                 send_data = '09'
                 self.ser.write(send_data, isHex=True)
-                self.frm_status_label["text"] = "Your command 09 is sent out"
+                self.frm_status_label["text"] = "Your command [{0}] is sent out".format(send_data)
             except Exception as ex:
                 self.frm_right_receive.insert("end", str(ex) + "\n")
     def Hex_Btn0A(self):
@@ -247,7 +248,7 @@ class CustomizedSerialToolUI(SerialTool.CustomizedSerialToolUI):
             try:
                 send_data = '0A'
                 self.ser.write(send_data, isHex=True)
-                self.frm_status_label["text"] = "Your command 10 is sent out"
+                self.frm_status_label["text"] = "Your command [{0}] is sent out".format(send_data)
             except Exception as ex:
                 self.frm_right_receive.insert("end", str(ex) + "\n")
 
