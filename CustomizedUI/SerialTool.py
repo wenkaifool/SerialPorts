@@ -49,7 +49,7 @@ class CustomizedSerialToolUI(object):
         self.frm = None
 
         self.root = master
-        self.button_width = 13
+        self.button_width = 10
         self.create_frame()
         self.thresholdValue = 1
 
@@ -374,16 +374,34 @@ class CustomizedSerialToolUI(object):
                                      font=font,
                                      command=self.Hex_Btn0A)
 
-        self.button_0x01.grid(row=0, column=0, padx=36, pady=5, sticky="wesn")
+        self.button_0x0B = tk.Button(self.menu_buttons, text="参数11",
+                                     activebackground="#00B2EE",
+                                     activeforeground="#E0EEEE",
+                                     bg="#008B8B", fg="#FFFFFF",
+                                     width=self.button_width,
+                                     font=font,
+                                     command=self.Hex_Btn0B)
+
+        self.button_0x0C = tk.Button(self.menu_buttons, text="参数12",
+                                     activebackground="#00B2EE",
+                                     activeforeground="#E0EEEE",
+                                     bg="#008B8B", fg="#FFFFFF",
+                                     width=self.button_width,
+                                     font=font,
+                                     command=self.Hex_Btn0C)
+
+        self.button_0x01.grid(row=0, column=0, padx=32, pady=5, sticky="wesn")
         self.button_0x02.grid(row=0, column=1, padx=26, pady=5, sticky="wesn")
         self.button_0x03.grid(row=0, column=2, padx=26, pady=5, sticky="wesn")
         self.button_0x04.grid(row=0, column=3, padx=26, pady=5, sticky="wesn")
         self.button_0x05.grid(row=0, column=4, padx=26, pady=5, sticky="wesn")
-        self.button_0x06.grid(row=1, column=0, padx=36, pady=5, sticky="wesn")
-        self.button_0x07.grid(row=1, column=1, padx=26, pady=5, sticky="wesn")
-        self.button_0x08.grid(row=1, column=2, padx=26, pady=5, sticky="wesn")
-        self.button_0x09.grid(row=1, column=3, padx=26, pady=5, sticky="wesn")
-        self.button_0x0A.grid(row=1, column=4, padx=26, pady=5, sticky="wesn")
+        self.button_0x06.grid(row=0, column=5, padx=26, pady=5, sticky="wesn")
+        self.button_0x07.grid(row=1, column=0, padx=32, pady=5, sticky="wesn")
+        self.button_0x08.grid(row=1, column=1, padx=26, pady=5, sticky="wesn")
+        self.button_0x09.grid(row=1, column=2, padx=26, pady=5, sticky="wesn")
+        self.button_0x0A.grid(row=1, column=3, padx=26, pady=5, sticky="wesn")
+        self.button_0x0B.grid(row=1, column=4, padx=26, pady=5, sticky="wesn")
+        self.button_0x0C.grid(row=1, column=5, padx=26, pady=5, sticky="wesn")
 
 
     # 第四部分状态栏窗口
@@ -416,7 +434,10 @@ class CustomizedSerialToolUI(object):
         pass
     def Hex_Btn0A(self):
         pass
-
+    def Hex_Btn0B(self):
+        pass
+    def Hex_Btn0C(self):
+        pass
 
     def open(self, event):
         pass

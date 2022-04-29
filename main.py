@@ -246,7 +246,25 @@ class CustomizedSerialToolUI(SerialTool.CustomizedSerialToolUI):
     def Hex_Btn0A(self):
         if self.ser:
             try:
-                send_data = '0A'
+                send_data = '10'
+                self.ser.write(send_data, isHex=True)
+                self.frm_status_label["text"] = "Your command [{0}] is sent out".format(send_data)
+            except Exception as ex:
+                self.frm_right_receive.insert("end", str(ex) + "\n")
+
+    def Hex_Btn0B(self):
+        if self.ser:
+            try:
+                send_data = '11'
+                self.ser.write(send_data, isHex=True)
+                self.frm_status_label["text"] = "Your command [{0}] is sent out".format(send_data)
+            except Exception as ex:
+                self.frm_right_receive.insert("end", str(ex) + "\n")
+
+    def Hex_Btn0C(self):
+        if self.ser:
+            try:
+                send_data = '12'
                 self.ser.write(send_data, isHex=True)
                 self.frm_status_label["text"] = "Your command [{0}] is sent out".format(send_data)
             except Exception as ex:
