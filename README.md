@@ -3,7 +3,7 @@ This program is about serial ports communication with a UI. Here are some requir
 (1) Language version: Python 3.8.  
 (2) Applied library: serial and Tkinter.  
 This is how it looks like if everything will be ok:  
-![image](https://github.com/wenkaifool/SerialPorts/tree/master/image/renderings.png)
+![image](https://github.com/wenkaifool/SerialPorts/blob/master/image/renderings.png)  
 
   
 Updated part: change hex buttons from 10 to 12, adding 0x0b and 0x0c.  
