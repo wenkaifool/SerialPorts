@@ -1,5 +1,9 @@
 # SerialPorts
-This program is about serial ports communication with a UI in Python 3.8. There are two libraries mainly used: serial and Tkinter.
+This program is about serial ports communication with a UI. Here are some requirements"
+(1) Language version: Python 3.8
+(2) Applied library: serial and Tkinter. 
+This is how it looks like if everything will be ok.
+
 Updated part: change hex buttons from 10 to 12, adding 0x0b and 0x0c.
 Updated time: 2022.04.29
 updated steps
