@@ -72,7 +72,7 @@ class CustomizedSerialToolUI(object):
 
     def create_title(self):
         self.title_status = tk.Text(self.title, autoseparators=False, height=1, highlightthickness=0, width=95,
-                                     bg="#292929", fg="#008B8B",
+                                     bg="#292929", fg="white", # #008B8B
                                      font=('Monaco', 11, 'bold'))
         self.title_status.pack()
         self.title_status.insert(tk.INSERT, '满洲里国峰电子科技 www.guofengdianzi.com 微信：guofengdianzi 邮箱：techsupport@guofengdianzi.com')
